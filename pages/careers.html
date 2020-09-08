@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+       <meta name="description" content="Delivery & takeout from foodpoint. Opportunitis to work in Foodpoint">
+       <meta name="keywords" content="Foodpoint Careers, Foodpoint Employment, Foodpoint Jobs">
+       <meta name="author" content="Rahul Valupadasu">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Foodpoint Food Delivery | Careers Page</title>  
+      <link rel="stylesheet" href="../css/lightbox.min.css">       
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+      <link rel="stylesheet" href="../css/style.css">
+      <script src="../js/lightbox-plus-jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <script>
+         $(window).on('load', function() { 
+             $.getScript("../../js/app.js", function(){});
+         });
+         $(document).ready(function(){
+             $('.slider').bxSlider({
+               auto: true,
+               autoControls: true,
+               stopAutoOnClick: true,
+             });
+         });
+          $( function() {
+            $( "#datepicker" ).datepicker();
+          } );
+      </script>
+   </head>
+   <body>
+      <header class = "container">
+         <div class="header-logo hand-symbol" onclick="homePage()"><strong>Foodpoint</strong></div>
+         <div class="second-segment">
+            <div class="second-seginternal">
+               <a class="common-color login-signup" href="#" id="login" onclick="openLoginModal()">Login&nbsp;<span>/</span>&nbsp;</a>                    
+               <a class="common-color login-signup" href="#" id="signup" onclick="openSignUpModal()">Sign up</a>
+               <span class="common-color login-signup" id="u_name">,</span>&nbsp;&nbsp;
+               <a class="common-color login-signup"  href="#" id="logout" onclick="logoutUser()" style="width:auto;">(Logout)</a>                    
+            </div>
+            <div class="second-seginternal-cart">
+               <a class="hand-symbol" onclick="openCartPage()"><img style="max-height: 5vh;
+                  max-width: 5vw;"  src="../images/shopping-cart-solid.svg" alt="not found"></a>
+               <span  id='lblCartCount'></span>
+            </div>
+         </div>
+      </header>
+      <main>
+         <div class = "container_career">
+            <section style="margin-top: 8vh;">
+               <div class="img-container">
+                  <div class="inr-container"></div>
+                  <p class="c-p">Careers</p>
+                  <h2 class="c-h1">Join Us</h2>
+               </div>
+               <div class="job-posting">
+                  <h2 style="text-align: center">Open Job Postings</h2>
+                  <p style="text-align: center">We are looking for people to join the team who are as motivated 
+                  </p>
+                  <p style="text-align: center">and want to make difference with there presence </p>
+                  <table class="job-table">
+                    <tr>
+                        <th>Postion</th>
+                        <th>Location</th>
+                    </tr>
+                     <tr>
+                        <td><a href="#">Accountant</a></td>
+                        <td>Sans Fransisco</td>
+                     </tr>
+                     <tr>
+                        <td><a href="#">Chef</a></td>
+                        <td> Canada</td>
+                     </tr>
+                     <tr>
+                        <td><a href="#">Developer</a></td>
+                        <td> Toronto</td>
+                     </tr>
+                  </table>
+               </div>
+               <h1 style="text-align: center">Perks and Benefits</h1>
+               <div class="benfits-careers">
+                  <div class="b-1">
+                     <h4>Relax, we've got you covered</h4>
+                     <p>We care about our workers in more ways than one. The comprehensive compensation plan provides premium coverage for workers and their dependent children, including medical, dental and vision. They also offer up to 20 weeks of paid parental leave, incentives in terms of pregnancy and adoption, regular gourmet lunches and snacks and more.</p>
+                  </div>
+                  <div class="b-2">
+                     <h4>Work-life balance</h4>
+                     <p>We think quality time outside the workplace is key to the happiness of our employees at work. That's why our flexible PTO programme allows team leaders to take some time off so they can be refreshed again. Employees also get two free lifetime Squarespace sites to pursue their creative passions and side hustles.</p>
+                  </div>
+                  <div class="b-3">
+                     <h4>Stay informed</h4>
+                     <p>We’re dedicated to ensuring all employees have the information they need to do their jobs well. Our monthly All Hands meetings, email newsletters, and CEO Office Hours are just a few of the programs we run to bring our three offices together and share key aspects of the business across the entire organization.</p>
+                  </div>
+               </div>
+            </section>
+         </div>
+      </main>
+      <footer class="container footer-alignment">
+         <a class = "footer-elements" href="/pages/aboutUs.html">About Us</a>
+         <a class = "footer-elements" href="/pages/careers.html">Careers</a>
+         <a class = "footer-elements" href="/pages/contact.html">Contact Us</a>
+         <a class = "footer-elements" href="/pages/enquiry.html">Enquiry</a>
+         <a class = "footer-elements" href="/pages/becomePartner.html">Become Partner</a>
+         <a class=  "footer-elements" href="/pages/terms.html">Terms and Conditions</a> 
+      </footer>
+      <!--Login form-->
+      <div id="id01" class="modal">
+         <form class="modal-content">
+            <div class="container">
+               <span class="modal-header">Login to proceed further</span>
+               <hr>
+               <label for="uemail"><b>Email</b><span class="mandatory">*</span></label>
+               <input type="text" placeholder="Enter Email" id="uemail">
+               <span class="validation-style" id="uemail_error"></span><br>
+               <label for="psw"><b>Password</b><span class="mandatory">*</span></label>
+               <input type="password" placeholder="Enter Password" id="psw">  
+               <span class="validation-style" id="psw_error"></span><br>
+               <span>Not registered?, please <a href="#" onclick="openSignUpModal()">Sign up</a></span><br>
+               <!--               <span class="validation-success-style" id="loginInSuccess"></span><br>-->
+            </div>
+            <div class="container" style="background-color:#f1f1f1">
+               <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>       <button class = "loginsignupbtn" type="button" onclick="loginUserValidation()">Login</button>    
+            </div>
+         </form>
+      </div>
+      <!--Signup form-->
+      <div id="id02" class="modal">
+         <form class="modal-content">
+            <div class="container">
+               <span  class="modal-header">Sign up to create an account</span>
+               <hr>
+               <label for="fullName"><b>Name</b><span class="mandatory">*</span></label>
+               <input type="text" placeholder="Enter Name" id="fullName">
+               <span class="validation-style" id="fullName_error"></span><br>
+               <label for="email"><b>Email</b><span class="mandatory">*</span></label>
+               <input type="text" placeholder="Enter Email" id="email">
+               <span class="validation-style" id="email_error"></span><br>
+               <label for="datepicker"><b>Date Of Birth</b></label>
+               <input type="text" id="datepicker" placeholder="Enter Date Of Birth">
+               <label for="signUpPsw"><b>Password</b><span class="mandatory">*</span></label>
+               <input type="password" placeholder="Enter Password" id="signUpPsw">
+               <span class="validation-style" id="signUpPsw_error"></span><br>
+               <label for="signUpPswConfirm"><b>Confirm Password</b><span class="mandatory">*</span></label>
+               <input type="password" placeholder="Confirm Password" id="signUpPswConfirm">
+               <span class="validation-style" id="signUpPswConfirm_error"></span><br>     
+               <span>Already registered?, please <a href="#" onclick="openLoginModal()">Login</a></span><br>
+               <span class="validation-success-style" id="signUpSuccess"></span><br>
+            </div>
+            <div class="container" style="background-color:#f1f1f1">                
+               <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+               <button class = "loginsignupbtn" type="button" onclick="signUpUserValidation()">Sign up</button>
+            </div>
+         </form>
+      </div>
+   </body>
+</html>

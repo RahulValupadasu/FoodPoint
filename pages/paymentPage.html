@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+       <meta name="description" content="Delivery & takeout from foodpoint. Online or cash on delivery available">
+       <meta name="keywords" content="Foodpoint, Food Check Out, Foodpoint Payment">
+       <meta name="author" content="Rahul Valupadasu">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Foodpoint Food Delivery | Checkout Page</title>  
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
+      <link rel="stylesheet" href="../css/style.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <script>
+         $(window).on('load', function() { 
+             $.getScript("../../js/app.js", function(){});
+         });
+          $( function() {
+            $( "#datepicker" ).datepicker();
+          } );
+      </script>
+   </head>
+   <body>
+      <header class = "container">
+         <div class="header-logo hand-symbol" onclick="homePage()"><strong>Foodpoint</strong></div>
+         <div class="second-segment">
+            <div class="second-seginternal">
+               <a class="common-color login-signup" href="#" id="login" onclick="openLoginModal()">Login&nbsp;<span>/</span>&nbsp;</a>                    
+               <a class="common-color login-signup" href="#" id="signup" onclick="openSignUpModal()">Sign up</a>
+               <span class="common-color login-signup" id="u_name">,</span>&nbsp;&nbsp;
+               <a class="common-color login-signup"  href="#" id="logout" onclick="logoutUser()" style="width:auto;">(Logout)</a>                    
+            </div>
+            <div class="second-seginternal-cart">
+               <a class="hand-symbol" onclick="openCartPage()"><img style="max-height: 5vh;
+                  max-width: 5vw;"  src="../images/shopping-cart-solid.svg" alt="not found"></a>
+               <span  id='lblCartCount'></span>
+            </div>
+         </div>
+      </header>
+       <main>
+         <br>
+         <section style="margin-top: 8vh;">
+            <div class="order-payment">
+               <div class="order-flex">
+                  <div class="cart">
+                     <h4>Order Summary</h4>
+                     <table id="order_table">
+                        <tr>
+                           <th>Item</th>
+                           <th>Quantity</th>
+                           <th>Price</th>
+                        </tr>
+                     </table>
+                     <br/>
+                     <table class="tot_order_prices">
+                        <colgroup>
+                           <col span="1" style="width: 70%;"/>
+                           <col span="1" style="width: 30%;"/>
+                        </colgroup>
+                        <tr >
+                           <td >Subtotal</td>
+                           <td id="subtotalvalue"></td>
+                        </tr>
+                        <tr >
+                           <td>Tax</td>
+                           <td id="taxvalue"></td>
+                        </tr>
+                        <tr >
+                           <td>Delivery</td>
+                           <td id="deliveryvalue">$3.00</td>
+                        </tr>
+                        <tr>
+                           <td colspan="2">
+                              <hr>
+                           </td>
+                        </tr>
+                        <tr >
+                           <td>Total</td>
+                           <td id="totalvalue"></td>
+                        </tr>
+                     </table>
+                     <hr class="line1">
+                     <div class="address_checkout">
+                        <h4>Delivery Address</h4>
+                        <p>Seacrh for address</p>
+                        <input type="text" id="address_box" placeholder="Address" autocomplete="address-level4" >
+                        <i class="fas fa-search-location"></i>
+                        <p style="margin-top: 2px">Cant find full address?<span><a href="#" onclick="full_address_window()">Try full form</a></span></p>
+                         <div id="addressHolder">
+                             <div><label>Street: </label><span id="add_value1"></span></div>
+                             <div><label>City: </label><span id="add_value2"></span></div>
+                            <div><label>Postal Code: </label><span id="add_value3"></span></div>
+                         </div>                        
+                     </div>
+                  </div>
+               </div>
+               <!--                <div class="line1"></div>-->
+               <div class="payment-flex">
+                  <div class="paysection">
+                     <h4>Payment</h4>
+                     <form id="payform">
+                        <div class="cardholder_c icon_rela">
+                           <label for="card_h">Card Holder</label>
+                           <input type="text" id="card_h" placeholder="Card Holder"/>
+                           <i class="fas fa-user"></i><br><br>  
+                        </div>
+                        <div class="card_num icon_rela">
+                           <label for="card">Card Number</label>
+                           <input type="text" id="card" placeholder="Card Number"/>
+                           <i class="fas fa-credit-card"></i><br><br>
+                        </div>
+                        <div class="exp_cvv_c ">
+                           <div class="exp_c icon_rela">
+                              <label for="exp">Expiry</label>
+                              <input type="text" id="exp" placeholder="00/00"/>
+                              <i class="fas fa-calendar-alt"></i>
+                           </div>
+                           <div class="cvc_c icon_rela">
+                              <label for="cvc">CVC</label>
+                              <input type="password" id="cvc" placeholder="000"/>
+                              <i class="fas fa-lock"></i><br><br>
+                           </div>
+                        </div>
+                         <span id="pay-val-msg" class="validation-style"></span>
+                     </form>
+                     <button class="bt-class" onclick="orderSucess()"> 
+                     Place Order
+                     </button>
+                     <span id="sucess-msg"></span>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <br>
+         <br>
+         <br>
+         <br>
+      </main>
+      <footer class="container footer-alignment">
+         <a class = "footer-elements" href="/pages/aboutUs.html">About Us</a>
+         <a class = "footer-elements" href="/pages/careers.html">Careers</a>
+         <a class = "footer-elements" href="/pages/contact.html">Contact Us</a>
+         <a class = "footer-elements" href="/pages/enquiry.html">Enquiry</a>
+         <a class = "footer-elements" href="/pages/becomePartner.html">Become Partner</a>
+         <a class=  "footer-elements" href="/pages/terms.html">Terms and Conditions</a>
+      </footer>
+      <!--Login form-->
+      <div id="id01" class="modal">
+         <form class="modal-content">
+            <div class="container">
+               <span class="modal-header">Login to proceed further</span>
+               <hr>
+               <label for="uemail"><b>Email</b><span class="mandatory">*</span></label>
+               <input type="text" placeholder="Enter Email" id="uemail">
+               <span class="validation-style" id="uemail_error"></span><br>
+               <label for="psw"><b>Password</b><span class="mandatory">*</span></label>
+               <input type="password" placeholder="Enter Password" id="psw">  
+               <span class="validation-style" id="psw_error"></span><br>
+               <span>Not registered?, please <a href="#" onclick="openSignUpModal()">Sign up</a></span><br>
+               <!--               <span class="validation-success-style" id="loginInSuccess"></span><br>-->
+            </div>
+            <div class="container" style="background-color:#f1f1f1">
+               <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>       <button class = "loginsignupbtn" type="button" onclick="loginUserValidation()">Login</button>    
+            </div>
+         </form>
+      </div>
+      <!--Signup form-->
+      <div id="id02" class="modal">
+         <form class="modal-content">
+            <div class="container">
+               <span  class="modal-header">Sign up to create an account</span>
+               <hr>
+               <label for="fullName"><b>Name</b><span class="mandatory">*</span></label>
+               <input type="text" placeholder="Enter Name" id="fullName">
+               <span class="validation-style" id="fullName_error"></span><br>
+               <label for="email"><b>Email</b><span class="mandatory">*</span></label>
+               <input type="text" placeholder="Enter Email" id="email">
+               <span class="validation-style" id="email_error"></span><br>
+               <label for="datepicker"><b>Date Of Birth</b></label>
+               <input type="text" id="datepicker" placeholder="Enter Date Of Birth">
+               <label for="signUpPsw"><b>Password</b><span class="mandatory">*</span></label>
+               <input type="password" placeholder="Enter Password" id="signUpPsw">
+               <span class="validation-style" id="signUpPsw_error"></span><br>
+               <label for="signUpPswConfirm"><b>Confirm Password</b><span class="mandatory">*</span></label>
+               <input type="password" placeholder="Confirm Password" id="signUpPswConfirm">
+               <span class="validation-style" id="signUpPswConfirm_error"></span><br>     
+               <span>Already registered?, please <a href="#" onclick="openLoginModal()">Login</a></span><br>
+               <span class="validation-success-style" id="signUpSuccess"></span><br>
+            </div>
+            <div class="container" style="background-color:#f1f1f1">                
+               <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+               <button class = "loginsignupbtn" type="button" onclick="signUpUserValidation()">Sign up</button>
+            </div>
+         </form>
+      </div>
+      <div id ="add_pop" class="modal">
+         <form class ="modal-content">
+            <div class="container">
+               <label for="ustreet"><b>Street</b><span class="mandatory">*</span></label>
+               <input type="text" placeholder="Street" id="ustreet">
+               <span class="validation-style" id="ustreet_error"></span><br>
+               <label for="ucity"><b>City</b><span class="mandatory">*</span></label>
+               <input type="text" placeholder="Enter Password" id="ucity">  
+               <span class="validation-style" id="ucity_error"></span><br>
+               <label for="upostal"><b>Postal Code</b><span class="mandatory">*</span></label>
+               <input type="text" placeholder="Postal Code" id="upostal">  
+               <span class="validation-style" id="upostal_error"></span><br>
+               <div class="container" style="background-color:#f1f1f1">
+                  <button type="button" onclick="document.getElementById('add_pop').style.display='none'" class="cancelbtn">Cancel</button>       <button class = "loginsignupbtn" type="button" onclick="saveAddress()">Save</button>    
+               </div>
+            </div>
+         </form>
+      </div>
+   </body>
+</html>

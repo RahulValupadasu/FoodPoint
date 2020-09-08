@@ -1,0 +1,863 @@
+
+
+/*CSS for header*/
+
+header {
+	position: fixed;
+	background-color: white;
+	width: 100%;
+	z-index: 1;
+	display: block;
+	border-width: 0 0 1px;
+	height: 8vh;
+	border: 1px solid transparent;
+	padding: 14px 16px;
+	color: #C00000;
+	display: flex;
+	justify-content: space-between;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	z-index: 10000;
+}
+
+main {
+	display: block;
+	font-family: Georgia, "Times New Roman", sans-serif;
+	padding: 0.5em;
+} 
+
+.second-segment {
+	display: flex;
+	flex: 5;
+}
+
+.second-seginternal {
+	flex: 4;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.second-seginternal-cart {
+	display: flex;
+	flex: 1;
+	justify-content: flex-end;
+}
+
+.single-slide {
+	flex: 2
+}
+
+.no-matches {
+	display: none;
+	margin: 0 auto;
+}
+
+.logo-styling {
+	flex: 2;
+	font-size: 4vh
+}
+
+body {
+	margin: 0px;
+	font-family: Georgia, "Times New Roman", sans-serif;
+}
+
+.common-color {
+	color: #C00000
+}
+
+.search-styling {
+	width: 50%;
+	display: block;
+	margin: 0 auto;
+}
+
+.slider-styling {
+	display: flex;
+	justify-content: space-between;
+	background-color: #C00000;
+}
+
+.card-styling {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	transition: 0.3s;
+}
+
+.card-styling:hover {
+	box-shadow: 0 4px 16px 4px rgba(0, 0, 0.2, 0.4);
+}
+
+
+/* Style for the main element  */
+
+.main-content {
+	margin-top: 8vh;
+}
+
+
+/* Style for the footer element */
+
+footer {
+	font-family: Verdana, Arial, sans-serif;
+	margin-top: 0.2em;
+	background-color: #ce2525;
+	color: #FFFFFF;
+	padding: 0.5%;
+}
+
+.footer-elements {
+	color: white;
+	text-decoration: none;
+}
+.footer-elements:hover {
+  text-decoration: underline;
+}
+* {
+	box-sizing: border-box;
+}
+
+.item-list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+
+
+/*
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}
+*/
+
+/*Payment Section CSS*/
+.paysection {
+	padding-right: 10%;
+	margin: 5px auto;
+	width: 80%;
+}
+
+/*Payment Form CSS*/
+#payform {
+	border: 1px solid #dddddd;
+	padding: 2%;
+}
+
+.paysection label {
+	display: block;
+	letter-spacing: 1px;
+	margin-bottom: 5px;
+}
+
+.paysection input {
+	text-align: center;
+	width: 100%;
+	padding: 7px 0px 7px 0px;
+	border-radius: 5px;
+	outline: none;
+	border: 2px solid #dddddd;
+	letter-spacing: 1px;
+	font-size: 16px;
+	color: #555555;
+}
+
+.exp_cvv_c {
+	display: flex;
+	justify-content: space-between;
+}
+
+.paysection h2 {
+	text-align: center;
+	margin-top: 4px;
+}
+
+/*Place Order button in payment section CSS*/
+.bt-class {
+	margin-top: 20px;
+	text-align: center;
+	background-color: #ce2525db;
+	border-radius: 25px;
+	padding: 12px;
+	cursor: pointer;
+	width: 100%;
+}
+
+/*Order confirmation message CSS*/
+#sucess-msg {
+	color: green;
+	margin-top: 10%;
+}
+
+/*Font awsome icon in payment section CSS*/
+.icon_rela {
+	position: relative;
+}
+
+
+/*fontawsome icons CSS*/
+.icon_rela .fas {
+	position: absolute;
+	bottom: 35px;
+	left: 20px;
+	font-size: 20px;
+}
+
+
+/*Cart Section CSS*/
+
+.cart {
+	padding-left: 10%;
+	padding-right: 10%;
+	margin: 5px;
+}
+
+
+
+/*Payment Page flex CSS*/
+.order-payment {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.order-flex {
+	flex: 2;
+	display: flex;
+}
+
+.payment-flex {
+	flex: 1;
+	display: flex;
+}
+/*Payment Page flex CSS end here*/
+
+
+/*Order section CSS*/
+.summary-heading {
+	text-align: center;
+	padding-left: 30px;
+}
+
+/* Order table CSS*/
+#order_table tr th {
+	text-align: center;
+	/*  height: 60px;*/
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+}
+
+#order_table tr td {
+	text-align: center;
+	width: 100vw;
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+}
+
+#order_table tr {
+	border-bottom: 1px solid silver;
+}
+
+#order_table {
+	width: 100%;
+	table-layout: auto;
+}
+
+.line1 {
+	border-left: 1px solid silver;
+}
+
+.tot_order_prices {
+	width: auto;
+	text-align: left;
+	padding-left: 70%;
+}
+
+/* Order table CSS end here*/
+
+/*Address CSS*/
+.address_checkout p {
+	margin-bottom: 5px;
+}
+
+.address_checkout .fas {
+	position: relative;
+	left: -210px;
+	font-size: 20px
+}
+
+#address_box {
+	text-align: center;
+	width: 210px;
+}
+/*Address CSS ends here*/
+
+/*Careers Page CSS*/
+.container_career {
+	padding: 2px;
+}
+
+.img-container {
+	background-image: url(../images/cover_1.jpg);
+	height: 70%;
+	background-position: center;
+	position: relative;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.inr-container {
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	color: white;
+	height: auto;
+	margin-top: 200px;
+}
+
+.c-p {
+	font-size: 90px;
+	font-family: "Shadows into Lights", sans-serif;
+	text-align: center;
+	color: white;
+}
+
+.c-h1 {
+	font-size: 7em;
+	font-family: "Shadows into Lights", sans-serif;
+	text-align: center;
+	color: white;
+}
+
+.c-h2 {
+	margin-top: -17px;
+	font-family: "Source Sans Pro", cursive;
+	font-size: 1.7em;
+	text-align: center;
+	font-weight: 400;
+	color: white
+}
+
+.job-table {
+	margin: 4% auto;
+	text-align: left;
+	width: 50%;
+	border-spacing: 30px;
+	padding-left: 10%;
+}
+
+.job-table a {
+	text-decoration: none;
+	color: #C00000;
+}
+
+.benfits-careers {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.benfits-careers p {
+	margin-left: 15%;
+	margin-right: 15%;
+}
+
+.benfits-careers h4 {
+	margin-left: 15%;
+	margin-right: 15%;
+}
+/*Careers Page CSS end here*/
+
+
+/*Terms and Conditions css*/
+.terms-conditions {
+	margin: 80px auto;
+}
+
+form {
+	border: 3px solid #f1f1f1;
+}
+/*Terms and Conditions css ends here*/
+
+
+/*Login Modal css*/
+input[type=text],
+input[type=password] {
+	width: 100%;
+	padding: 8px 20px;
+	margin: 5px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+
+/* loginsignupbtn buttons */
+.loginsignupbtn {
+	background-color: #3c8dbc;
+	border-color: #367fa9;
+	color: white;
+	padding: 10px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: auto;
+	font-weight: 600;
+	border: 1px solid;
+	border-radius: 5px;
+}
+
+.loginsignupbtn:hover {
+	background-color: #226890;
+}
+
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+	background-color: #f44336;
+	border-color: #367fa9;
+	color: white;
+	padding: 10px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: auto;
+	font-weight: 600;
+	border: 1px solid;
+	border-radius: 5px;
+}
+
+.cancelbtn:hover {
+	background-color: #b32218;
+}
+
+.container {
+	padding: 12px;
+}
+
+
+/* Mandatory field styling */
+.mandatory {
+	color: red;
+}
+
+
+/* The Modal styling */
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 110%;
+	overflow: auto;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.4);
+	padding-top: 60px;
+}
+
+
+/* Modal Content  CSS*/
+
+.modal-content {
+	background-color: #fefefe;
+	margin: 2% auto 15% auto;
+	border: 1px solid #888;
+	width: 50%;
+}
+
+.individual-count {
+	width: 20%;
+	background: white;
+	color: black;
+	padding: 5px 12px;
+	margin: 5px 2px;
+	border: none;
+	width: auto;
+	font-weight: 600;
+	border-radius: 5px;
+}
+
+.plus-button {
+	width: 20%;
+	background: #3cbc43;
+	color: white;
+	padding: 5px 12px;
+	margin: 5px 2px;
+	border: none;
+	cursor: pointer;
+	width: auto;
+	font-weight: 600;
+	border-radius: 5px;
+}
+
+.plus-button:hover {
+	background-color: green;
+}
+
+.minus-button {
+	width: 20%;
+	background: #f44336;
+	color: white;
+	padding: 5px 12px;
+	margin: 5px 2px;
+	border: none;
+	cursor: pointer;
+	width: auto;
+	font-weight: 600;
+	border-radius: 5px;
+}
+
+.minus-button:hover {
+	background-color: red;
+}
+
+
+/* Media Query for viewport width less than 320px*/
+@media (max-width: 319px) {
+	.card-individual {
+		width: 100%;
+		padding: 5px;
+	}
+	.footer-alignment {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		align-items: center;
+	}
+	.card-item-name {
+		font-size: 12px;
+		margin-left: 1%;
+	}
+	.caption {
+		display: flex;
+		justify-content: center;
+		color: #c00000;
+		margin-top: 6vh;
+		font-size: 8px;
+	}
+	.header-logo {
+		flex: 2;
+		font-size: 2vh;
+	}
+	.login-signup {
+		font-size: 1.5vh;
+	}
+	#lblCartCount {
+		font-size: 1.5vh;
+	}
+	.modal-content {
+		background-color: #fefefe;
+		margin: 2% auto 15% auto;
+		border: 1px solid #888;
+		width: 70%;
+	}
+	.validation-style {
+		font-size: 12px;
+		color: red;
+	}
+	.validation-success-style {
+		font-size: 12px;
+		color: green;
+	}
+	.tot_order_prices {
+		width: auto;
+		text-align: left;
+		padding-left: 40%;
+	}
+	.line2 {
+		border-left: 1px solid silver;
+	}
+	.order-payment {
+		display: block;
+	}
+	.exp_cvv_c {
+		flex-direction: column;
+	}
+	.exp_c {
+		width: 100%;
+	}
+	.cvc_c {
+		width: 100%;
+		margin-top: 20px;
+	}
+	.exp_c .fas {
+		bottom: 10px;
+	}
+}
+
+/*Media Query for viewport width between 320px and 480px*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+	.card-individual {
+		/*    float: left;*/
+		width: 100%;
+		padding: 5px;
+	}
+	.footer-alignment {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		align-items: center;
+	}
+	.card-item-name {
+		font-size: 14px;
+		margin-left: 1%;
+	}
+	.caption {
+		display: flex;
+		justify-content: center;
+		color: #c00000;
+		margin-top: 8vh;
+		font-size: 12px;
+	}
+	.header-logo {
+		flex: 2;
+		font-size: 3vh;
+	}
+	.login-signup {
+		font-size: 2.25vh;
+	}
+	#lblCartCount {
+		font-size: 2.25vh;
+	}
+	.modal-content {
+		background-color: #fefefe;
+		margin: 2% auto 15% auto;
+		border: 1px solid #888;
+		width: 70%;
+	}
+	.validation-style {
+		font-size: 12px;
+		color: red;
+	}
+	.validation-success-style {
+		font-size: 12px;
+		color: green;
+	}
+	.tot_order_prices {
+		width: auto;
+		text-align: left;
+		padding-left: 40%;
+	}
+	.line2 {
+		border-left: 1px solid silver;
+	}
+	.order-payment {
+		display: block;
+	}
+	.exp_cvv_c {
+		flex-direction: column;
+	}
+	.exp_c {
+		width: 100%;
+	}
+	.cvc_c {
+		width: 100%;
+		margin-top: 20px;
+	}
+	.exp_c .fas {
+		bottom: 10px;
+	}
+}
+
+/*Media query for viewport width 481px and 768px*/
+@media (min-width: 481px) and (max-width: 768px) {
+	.card-individual {
+		width: 50%;
+		padding: 5px;
+	}
+	.footer-alignment {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		align-items: center;
+	}
+	.card-item-name {
+		font-size: 17px;
+		margin-left: 1%;
+	}
+	.caption {
+		display: flex;
+		justify-content: center;
+		color: #c00000;
+		margin-top: 10vh;
+		font-size: 14px;
+	}
+	.header-logo {
+		flex: 2;
+		font-size: 4vh;
+	}
+	.login-signup {
+		font-size: 2.5vh;
+	}
+	#lblCartCount {
+		font-size: 2.5vh;
+	}
+	.validation-style {
+		font-size: 12px;
+		color: red;
+	}
+	.validation-success-style {
+		font-size: 12px;
+		color: green;
+	}
+	.tot_order_prices {
+		width: auto;
+		text-align: left;
+		padding-left: 40%;
+	}
+	.line2 {
+		border-left: 1px solid silver;
+	}
+	.order-payment {
+		display: block;
+	}
+	.exp_cvv_c {
+		flex-direction: column;
+	}
+	.exp_c {
+		width: 100%;
+	}
+	.cvc_c {
+		width: 100%;
+		margin-top: 20px;
+	}
+	.exp_c .fas {
+		bottom: 10px;
+	}
+}
+
+/*Media Query for viewport width between 769px and 1279px*/
+
+@media (min-width: 769px) and (max-width: 1279px) {
+	.card-individual {
+		width: 33%;
+		padding: 5px;
+	}
+	.footer-alignment {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+        height: 9vh;
+	}
+	.card-item-name {
+		margin-left: 1%;
+	}
+	.caption {
+		display: flex;
+		justify-content: center;
+		color: #c00000;
+		margin-top: 10vh;
+		font-size: 16px;
+	}
+	.header-logo {
+		flex: 2;
+		font-size: 4vh;
+	}
+	.login-signup {
+		font-size: 2.5vh;
+	}
+	#lblCartCount {
+		font-size: 2.5vh;
+	}
+	.modal-header {
+		font-size: 22px;
+		font-weight: bold;
+	}
+	.validation-style {
+		font-size: 12px;
+		color: red;
+	}
+	.validation-success-style {
+		font-size: 12px;
+		color: green;
+	}
+}
+
+/* Media Query for vieport width greater than 1280px*/
+@media (min-width: 1280px) {
+	.card-individual {
+		width: 20%;
+		padding: 5px;
+	}
+	.footer-alignment {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+        height: 9vh;
+	}
+	.card-item-name {
+		margin-left: 1%;
+	}
+	.caption {
+		display: flex;
+		justify-content: center;
+		color: #c00000;
+		margin-top: 10vh;
+		font-size: 16px;
+	}
+	.header-logo {
+		flex: 2;
+		font-size: 4vh;
+	}
+	.login-signup {
+		font-size: 2.5vh;
+	}
+	#lblCartCount {
+		font-size: 2.5vh;
+	}
+	.modal-header {
+		font-size: 22px;
+		font-weight: bold;
+	}
+	.validation-style {
+		font-size: 12px;
+		color: red;
+	}
+	.validation-success-style {
+		font-size: 12px;
+		color: green;
+	}
+}
+
+.content-view-height {
+	height: 100vh;
+}
+
+.hand-symbol {
+	cursor: pointer;
+}
+
+.res-img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/*CSS For Search bar in Home page*/
+search-bar {
+	width: 50%;
+	box-sizing: border-box;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	font-size: 16px;
+	background-color: white;
+	background-image: url('searchicon.png');
+	background-position: 10px 10px;
+	background-repeat: no-repeat;
+	padding: 12px 20px 12px 40px;
+	-webkit-transition: width 0.4s ease-in-out;
+	transition: width 0.4s ease-in-out;
+}
+
+search-bar:focus {
+	width: 75%;
+}
